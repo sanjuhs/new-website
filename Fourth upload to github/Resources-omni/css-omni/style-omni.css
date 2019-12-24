@@ -1,0 +1,531 @@
+/* orange color
+    border: 1px solid #e67e22
+
+
+*/
+/*--------------------------------------------------*/
+/*BASIC SETUP */
+/*--------------------------------------------------*/
+
+@font-face{
+    font-family: myfirst;
+    src:url("Lato-Regular.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+html{
+    background-color: #ffffff;
+    color: #00000010;
+    font-family: myfirst , monospace ;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.clear-fix{zoom: 1;}
+.clear-fix:after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*--------------------------------------------------*/
+/*Reusable Components */
+/*--------------------------------------------------*/
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto 0 auto;
+}
+
+section{
+    padding: 80px 0;
+}
+
+.box{
+    padding: 1%;
+}
+
+h1{
+    margin: 0;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 240%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+h2{
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center; 
+    margin-bottom: 30px;
+}
+h2:after{
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: "  ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px; 
+}
+
+h3{
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+/*--------------------------------------------------*/
+/*PARAGRAPHS */
+/*--------------------------------------------------*/
+
+.long-copy{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+
+
+/*--------------------------------------------------*/
+/*ICONS */
+/*--------------------------------------------------*/
+.icon-big{
+    font-size: 400%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+
+/*--------------------------------------------------*/
+/*BUTTONS */
+/*--------------------------------------------------*/
+
+.btn:link,
+.btn:visited,
+input[type="submit"]{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300px;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: all 0.2s;
+    /*transition : background-color 0.2s,border 0.2s ,color 0.2s;*/
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type="submit"]{
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #ffffff;
+    margin-right: 15px;
+}
+.btn-ghost:link,
+.btn-ghost:visited{ 
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:hover,
+.btn:active{
+    background-color: #d35400;
+}
+.btn-full:hover,
+.btn-full:active,
+input[type="submit"]:hover,
+input[type="submit"]:active{
+    border: 1px solid #d35400; 
+}
+.btn-ghost:hover,
+.btn-ghost:active { 
+    border: 1px solid #d35400;
+    color: #ffffff;
+}
+
+
+/*--------------------------------------------------*/
+/*Header */
+/*--------------------------------------------------*/
+
+
+header{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url("img-background/hero.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed;
+}
+
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+.main-nav{
+    float:right;
+    list-style: none;
+    margin-top: 55px;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 8px  0px;
+    color:#ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #e67e22;
+}
+
+
+/*--------------------------------------------------*/
+/*Features */
+/*--------------------------------------------------*/
+.section-features .long-copy{
+    margin-bottom: 30px;
+}
+
+
+/*--------------------------------------------------*/
+/*MEALS SECTION */
+/*--------------------------------------------------*/
+.section-meal{
+    padding: 0;
+}
+.meals-showcase{
+    list-style: none;
+    padding: 0;
+}
+.meals-showcase li{
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo{
+    width: 100%;
+    margin: 0;
+    overflow: hidden; 
+    background-color: black;
+}
+
+.meal-photo img{
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s ,opacity 0.5s;
+}
+.meal-photo img:hover{
+    opacity: 1;
+    transform: scale(1.03);
+    
+}
+
+/*--------------------------------------------------*/
+/*how it works SECTION */
+/*--------------------------------------------------*/
+
+.section-steps{
+    background-color: #f4f4f4;
+    
+}
+.step-box:first-child{
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+}
+.step-box:last-child{
+    padding-left: 3%;
+    margin-top: 70px;
+}
+.iphone{
+    width: 40%;
+}
+.work-step{
+    margin-bottom: 50px;
+}
+.work-step:last-of-type{
+    margin-bottom: 80px;
+}
+.work-step div{
+    color: #e67e22;
+    border:2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+
+}
+
+.butn-app{
+    height: 50px;
+    width: auto;
+    margin-right:  20 px;
+    padding-right: 10px;
+}
+
+/*--------------------------------------------------*/
+/*Cities section */
+/*--------------------------------------------------*/
+
+.section-cities img{
+    /*margin-left: 0;
+    transform: scale(0.1);*/
+    
+    width: 100%;
+    height: auto;
+}
+.section-cities h3{
+    text-align: center;
+}
+.cities-info p{
+    margin-bottom: 5px;
+    font-size: 110%;
+}
+.cities-info i{
+    color: darkorchid;
+}
+.cities-info a:visited,
+.cities-info a:link{
+    text-decoration: none;
+    color: black;   
+    transition: color 0.2s;
+}
+.cities-info a:hover,
+.cities-info a:active{
+    text-decoration: none;
+    color: #e67e22;   
+}
+
+/*--------------------------------------------------*/
+/*Customer Section */
+/*--------------------------------------------------*/
+.customer{
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0, 0, 0, 0.85)), url(img-background/back-customers.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.customer h2,
+.customer blockquote{
+    color: #ffffff;
+}
+ blockquote{
+    padding: 5%;
+    font: italic;
+    line-height: 145%;
+    display: block;
+    font-size: 90%;
+    text-align: justify;
+}
+.customer blockquote::before{
+    content: "\201C";
+    font-size: 400%;
+}
+.customer cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+.customer img{
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/*--------------------------------------------------*/
+/*Sign-up */
+/*--------------------------------------------------*/
+
+.section-plans{
+    background-color: #f4f4f4;
+}
+.plan-box{
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+
+}
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+
+}
+.plan-price{
+    font-size: 300%;
+    margin-bottom: 10%;
+    font-weight: 100;
+    color: #000000;
+}
+.plan-price span{
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.plan-price-meal{
+    font-size: 80%;
+
+}
+.plan-box li{
+    list-style: none;
+    border-radius: 5px;
+    /*box-shadow: 0 2px 2px #e8e8e8; */
+}
+.plan-box i{
+    color: #e67e22;
+    font-size: 150%;
+    margin-right: 12px;
+    margin-left: 5px;
+}
+.plan-box div:last-child{
+    text-align: center;
+    border: 0;
+}
+.plan-box div:first-child{
+    background-color: #fafafa;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/*--------------------------------------------------*/
+/*Contact Form*/
+/*--------------------------------------------------*/
+
+.section-form{
+    width: 60%;
+    margin: 0 auto;
+
+}
+input[type="text"],
+input[type="email"],
+select,
+textarea{
+width: 100%;
+padding: 7px;
+border-radius: 3px;
+border: 1px solid black;
+}
+.input[type="checkbox"]{
+margin: 10px 5px 10px 0;
+
+}
+*:focus{outline: none;}
+
+/*--------------------------------------------------*/
+/*Footer */
+/*--------------------------------------------------*/
+footer{
+    background-color: #333333;
+    padding: 20px;
+}
+.footer-nav{
+    list-style: none;
+    float: left;
+}
+.social-links{
+    list-style: none;
+    float: right;
+}
+.social-links li{
+    display: inline-block;
+    font-size: 200%;
+    color: #ffffff;
+    
+}
+footer a{
+    text-decoration: none;
+    color: #888888;
+    padding-right: 20px;
+}
+.footer-nav li{
+    display: inline-block;
+    font-size: 100%;
+    margin-top: 5%;
+}
+footer p{
+    color: #888888;
+    font-size: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-nav li a:visited,
+.footer-nav li a:link,
+.social-links li a:visited,
+.social-links li a:link{
+    border: 0;
+    text-decoration: none;
+    transition:  color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.social-links li a:hover,
+.social-links li a:active{
+    color: #dddddd;
+
+}
+/*--------------------------------------------------*/
+/*Extra def */
+/*--------------------------------------------------*/
+
+h2,h3,p,div{
+    color: black;
+}
+.ion-logo-facebook:hover,
+.ion-logo-facebook:active{
+    color:#3B5998;
+}
+.ion-logo-twitter:hover,
+.ion-logo-twitter:active{
+    color:#1da1f2;
+}
+.ion-logo-instagram:hover,
+.ion-logo-instagram:active{
+    color=background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf)
+}
+.ion-logo-instagram{
+
+}
